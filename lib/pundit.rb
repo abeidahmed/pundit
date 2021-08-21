@@ -314,7 +314,7 @@ module Pundit
   # @see https://github.com/varvet/pundit#customize-pundit-user
   # @return [Object] the user object to be used with pundit
   def pundit_user
-    current_user
+    Current.user || current_user
   end
 
   private
